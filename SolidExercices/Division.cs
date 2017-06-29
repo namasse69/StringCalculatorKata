@@ -25,7 +25,6 @@ namespace SolidExercices
                 resultat /= Convert.ToDecimal(nombre);
             }
 
-            Console.WriteLine("Opération valide");
             return resultat;
         }
     }

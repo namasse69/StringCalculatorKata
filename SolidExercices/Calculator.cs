@@ -8,33 +8,22 @@ namespace SolidExercices
     {
         public decimal Calculate(string operation)
         {
-            decimal resultat = 0;
-            Addition addition = new Addition();
-            Produit produit = new Produit();
-            Division division = new Division();
-            Soustraction soustraction = new Soustraction();
+            var operateurs = new List<IOperateur>();
+            operateurs.Add(new Addition());
+            operateurs.Add(new Produit());
+            operateurs.Add(new Division());
+            operateurs.Add(new Soustraction());
 
-            if (addition.PeutCalculer(operation))
+            foreach (var operateur in operateurs)
             {
-                return addition.Calcul(operation);
+                if(operateur.PeutCalculer(operation))
+                {
+                    return operateur.Calcul(operation);
+                }       
             }
-            if (produit.PeutCalculer(operation))
-            {
-                return produit.Calcul(operation);
-            } 
-            if (division.PeutCalculer(operation))
-            {
-                return division.Calcul(operation);
-            } 
-            if (soustraction.PeutCalculer(operation))
-            {
-                return soustraction.Calcul(operation);
-            }
-            else
-            {
-                Console.WriteLine("Opération non valide");
-                return 0;
-            }
+            
+            Console.WriteLine("Opération non valide");
+            return 0;
         }
     }
 }
