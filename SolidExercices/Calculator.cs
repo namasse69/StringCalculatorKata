@@ -22,8 +22,7 @@ namespace SolidExercices
                 }       
             }
             
-            Console.WriteLine("Opération non valide");
-            return 0;
+            throw new ArgumentOutOfRangeException();
         }
     }
 }
