@@ -26,6 +26,7 @@ namespace SolidExercices
                         resultat *= Convert.ToDecimal(nombre);
                 
                 }
+
                 return resultat;
             }
             catch (FormatException)

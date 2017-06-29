@@ -17,15 +17,17 @@ A LA FIN DU TP: pensez à pousser vos commits sur votre compte GitHub et envoyer 
 Réponses aux questions posées
 -----------------------------
 
-Q1)
+Q1)Pour éviter d'avoir trop de ifs il faut implémenter des classes de calculs pour chaque opérations.
 
-Q2)
+Q2)Le principe central est qu'un objet utilise contient des données et des comportements.
 
-Q3)
+Q3)On réalise un encapsulation des données, cela permet à une classe d'avoir accès seulement aux données qui lui sont utiles.
 
-Q4)
+Q4)Le calculator trainer permet de nous faire remonter des exceptions de calculs que nous avons pas traités. Cela nous permet de rajouter des exceptions tels que Format incorect ou division par 0.
 
-Q5)
+Q5)Le principe appliqué est qu'une classe ne doit changer que pour une seule raison.
 
 Q6)
+ 
+ 
  

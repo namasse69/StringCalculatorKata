@@ -13,8 +13,7 @@ Here are the proposed exercices:
 	* **Q1**: what can you do to avoid lots of ifs or a switch?
 * If it is not the case, remove any conditions about the operation to apply
 	* **Q2**: what is the core concept of object-oriented programmation you are using?
-* If it is not the case, make your calculator not aware of concrete operations it supports
-	* **Q3**: what is the principles you are applying in this case?
+* If it is not the case, make your calculator not aware of concrete operations it supports*  	
 * Then, we have a CalculatorTrainer class (and a console application using it) that run several operations stored in an array against Calculator
 	* NB: you need to include the CalculatorTrainer class in the SolidExercices project and add the project SolidExercices.Console
 	* **Q4**: what are the issues with this class?

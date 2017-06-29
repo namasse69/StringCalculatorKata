@@ -25,7 +25,6 @@ namespace SolidExercices
                 foreach (var nombre in nombres.Skip(1).ToArray())
                 {
                         resultat -= Convert.ToDecimal(nombre);
-                
                 }
 
                 return resultat;
