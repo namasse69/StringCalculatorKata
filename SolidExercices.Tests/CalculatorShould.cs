@@ -33,5 +33,11 @@ namespace SolidExercices.Tests
             var result = calculator.Calculate("6/3");
             Check.That(result).IsEqualTo(2m);
         }
+        public void CalculateMultiProd()
+        {
+            var calculator = new Calculator();
+            var result = calculator.Calculate("6*4*2.5");
+            Check.That(result).IsEqualTo(60m);
+        }
     }
 }
