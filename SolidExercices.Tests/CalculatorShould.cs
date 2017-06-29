@@ -13,6 +13,7 @@ namespace SolidExercices.Tests
             Check.That(result).IsEqualTo(3.3m);
         }
 
+        [Test]
         public void CalculateASub()
         {
             var calculator = new Calculator();
@@ -20,6 +21,7 @@ namespace SolidExercices.Tests
             Check.That(result).IsEqualTo(2m);
         }
 
+        [Test]
         public void CalculateAProd()
         {
             var calculator = new Calculator();
@@ -27,16 +29,19 @@ namespace SolidExercices.Tests
             Check.That(result).IsEqualTo(8m);
         }
 
+        [Test]
         public void CalculateADiv()
         {
             var calculator = new Calculator();
             var result = calculator.Calculate("6/3");
             Check.That(result).IsEqualTo(2m);
         }
+
+        [Test]
         public void CalculateMultiProd()
         {
             var calculator = new Calculator();
-            var result = calculator.Calculate("6*4*2.5");
+            var result = calculator.Calculate("6*4*2,5");
             Check.That(result).IsEqualTo(60m);
         }
     }

@@ -22,7 +22,7 @@ namespace SolidExercices
 
             foreach (var nombre in nombres.Skip(1).ToArray())
             {
-                resultat += Convert.ToDecimal(nombre);
+                resultat /= Convert.ToDecimal(nombre);
             }
 
             Console.WriteLine("Opération valide");

@@ -18,15 +18,15 @@ namespace SolidExercices
             {
                 return addition.Calcul(operation);
             }
-            else if (produit.PeutCalculer(operation))
+            if (produit.PeutCalculer(operation))
             {
                 return produit.Calcul(operation);
             } 
-            else if (division.PeutCalculer(operation))
+            if (division.PeutCalculer(operation))
             {
                 return division.Calcul(operation);
             } 
-            else if (soustraction.PeutCalculer(operation))
+            if (soustraction.PeutCalculer(operation))
             {
                 return soustraction.Calcul(operation);
             }
@@ -35,7 +35,6 @@ namespace SolidExercices
                 Console.WriteLine("Opération non valide");
                 return 0;
             }
-            return resultat;
         }
     }
 }
