@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SolidExercices
@@ -8,62 +9,26 @@ namespace SolidExercices
         public decimal Calculate(string operation)
         {
             decimal resultat = 0;
+            Addition addition = new Addition();
+            Produit produit = new Produit();
+            Division division = new Division();
+            Soustraction soustraction = new Soustraction();
 
-            if (operation.Contains('+'))
+            if (addition.PeutCalculer(operation))
             {
-                string[] nombres = operation.Split('+');
-
-                resultat = Convert.ToDecimal(nombres[0]);
-
-                foreach (var nombre in nombres.Skip(1).ToArray())
-                {
-                    resultat += Convert.ToDecimal(nombre);
-                }
-
-                Console.WriteLine("Opération valide");
-                return resultat;
+                return addition.Calcul(operation);
             }
-            else if (operation.Contains('*'))
+            else if (produit.PeutCalculer(operation))
             {
-                string[] nombres = operation.Split('*');
-
-                resultat = Convert.ToDecimal(nombres[0]);
-
-                foreach (var nombre in nombres.Skip(1).ToArray())
-                {
-                    resultat += Convert.ToDecimal(nombre);
-                }
-
-                Console.WriteLine("Opération valide");
-                return resultat;
-            }
-            else if (operation.Contains('/'))
+                return produit.Calcul(operation);
+            } 
+            else if (division.PeutCalculer(operation))
             {
-                string[] nombres = operation.Split('/');
-
-                resultat = Convert.ToDecimal(nombres[0]);
-
-                foreach (var nombre in nombres.Skip(1).ToArray())
-                {
-                    resultat += Convert.ToDecimal(nombre);
-                }
-
-                Console.WriteLine("Opération valide");
-                return resultat;
-            }
-            else if (operation.Contains('-'))
+                return division.Calcul(operation);
+            } 
+            else if (soustraction.PeutCalculer(operation))
             {
-                string[] nombres = operation.Split('-');
-
-                resultat = Convert.ToDecimal(nombres[0]);
-
-                foreach (var nombre in nombres.Skip(1).ToArray())
-                {
-                    resultat += Convert.ToDecimal(nombre);
-                }
-
-                Console.WriteLine("Opération valide");
-                return resultat;
+                return soustraction.Calcul(operation);
             }
             else
             {
