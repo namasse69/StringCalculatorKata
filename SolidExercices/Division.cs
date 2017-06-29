@@ -17,15 +17,27 @@ namespace SolidExercices
         public decimal Calcul(string operation)
         {
             string[] nombres = operation.Split('/');
-
-            var resultat = Convert.ToDecimal(nombres[0]);
-
-            foreach (var nombre in nombres.Skip(1).ToArray())
+            
+            try
             {
-                resultat /= Convert.ToDecimal(nombre);
-            }
+                var resultat = Convert.ToDecimal(nombres[0]);
 
-            return resultat;
+                foreach (var nombre in nombres.Skip(1).ToArray())
+                {
+                        resultat /= Convert.ToDecimal(nombre);
+                
+                }
+
+                return resultat;
+            }
+            catch (DivideByZeroException)
+            {
+                throw new ArgumentOutOfRangeException("Attetion division par zéro");
+            }
+            catch (FormatException)
+            {
+                throw new ArgumentException("Format incorrect");
+            }
         }
     }
 }
